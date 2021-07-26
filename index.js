@@ -2,8 +2,7 @@ const express = require('express');
 const socket = require('socket.io')
 const PORT = process.env.PORT || 3000
 const cors = require('cors'); 
-
-
+const {v4 : uuidv4} = require('uuid');
 
 const app = express();
 //Setting up port
@@ -22,7 +21,7 @@ const io = socket(server,{
   });
 io.on('connection',(socket)=>{
     console.log('Made a connection',socket.id)
-
+//
     socket.on('join-room',(room, handle)=>{
         socket.join(room)
         console.log(handle);
@@ -47,5 +46,11 @@ io.on('connection',(socket)=>{
     socket.on('typing',(data,room)=>{
         //Broadcasting the data to all the sockets as soon as chat(data) is recieved from any client socket
         socket.to(room).emit('typing',data)
+    })
+
+    socket.on('video-call',(room)=>{
+        let videoID = uuidv4();
+        socket.to(room).emit('start-video-call',videoID)
+        socket.emit('start-video-call',videoID)
     })
 })
