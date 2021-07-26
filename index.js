@@ -53,4 +53,9 @@ io.on('connection',(socket)=>{
         socket.to(room).emit('start-video-call',videoID,handle)
         socket.emit('start-video-call',videoID,handle)
     })
+
+    socket.on('video-confirmation', (room,handle,videoID) => {
+        console.log('Confirmed')
+        socket.to(room).emit('video-confirmation',room,handle,videoID)
+    })
 })
