@@ -48,9 +48,9 @@ io.on('connection',(socket)=>{
         socket.to(room).emit('typing',data)
     })
 
-    socket.on('video-call',(room)=>{
+    socket.on('video-call',(room,handle)=>{
         let videoID = uuidv4();
-        socket.to(room).emit('start-video-call',videoID)
-        socket.emit('start-video-call',videoID)
+        socket.to(room).emit('start-video-call',videoID,handle)
+        socket.emit('start-video-call',videoID,handle)
     })
 })
