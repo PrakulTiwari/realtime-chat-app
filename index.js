@@ -17,7 +17,7 @@ const app = express();
 //Setting up port
 const server = app.listen(PORT,console.log(`Running on ${PORT}`))
 
-app.use(cors({origin:'https://chatting-web-app.netlify.app/'}));
+app.use(cors({origin:'https://chatting-web-app.netlify.app'}));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
@@ -29,7 +29,7 @@ app.use(express.json())
 //Socket setup
 const io = socket(server,{
     cors: {
-      origin: 'https://chatting-web-app.netlify.app/'
+      origin: 'https://chatting-web-app.netlify.app'
     }
   });
 io.on('connection',(socket)=>{
