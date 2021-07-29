@@ -3,12 +3,25 @@ const socket = require('socket.io')
 const PORT = process.env.PORT || 3000
 const cors = require('cors'); 
 const {v4 : uuidv4} = require('uuid');
+const mongoose = require('mongoose')
+const Name = require('./models/name')
+require('dotenv').config()
+
+mongoose.connect(process.env.dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('db connected')
+    })
+    .catch((err) => { console.log(err) });
 
 const app = express();
 //Setting up port
 const server = app.listen(PORT,console.log(`Running on ${PORT}`))
 
-app.use(cors());
+app.use(cors({origin:'https://chatting-web-app.netlify.app/'}));
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json())
+
 
 //static file
 // app.use(express.static('public'));
@@ -16,7 +29,7 @@ app.use(cors());
 //Socket setup
 const io = socket(server,{
     cors: {
-      origin: '*'
+      origin: 'https://chatting-web-app.netlify.app/'
     }
   });
 io.on('connection',(socket)=>{
@@ -59,3 +72,16 @@ io.on('connection',(socket)=>{
         socket.to(room).emit('video-confirmation',room,handle,videoID)
     })
 })
+
+app.post('/name',(req,res)=>{
+        console.log(req.body)
+        const user = new Name(req.body)
+        user.save()
+            .then((result) => {
+                res.json({"sucess":true})
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+)
