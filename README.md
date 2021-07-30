@@ -7,13 +7,17 @@ A two-way interactive communication session between the user's browser and a nod
 ### Project Demo: https://chatting-web-app.netlify.app/
 
 <br><hr><br>
-![Express](https://img.shields.io/badge/express%20-%2314354C.svg?&style=for-the-badge&logo=express&logoColor=white) ![node.js](https://img.shields.io/badge/node.js%20-%2314.svg?&style=for-the-badge&logo=node.js&logoColor=white)
+
 ![socket.io](https://img.shields.io/badge/socket.io%20-%23148.svg?&style=for-the-badge&logo=socket.io&logoColor=black)
 ![js](https://img.shields.io/badge/javascipt%20-%2314677.svg?&style=for-the-badge&logo=javascript&logoColor=default)
 ![mongodb](https://img.shields.io/badge/mongodb%20-%2314677.svg?&style=for-the-badge&logo=mongodb&logoColor=red)
 ![heroku](https://img.shields.io/badge/heroku%20-%23679.svg?&style=for-the-badge&logo=heroku&logoColor=black)
 ![netlify](https://img.shields.io/badge/netlify%20-%23143.svg?&style=for-the-badge&logo=netlify&logoColor=pink)
 ![html](https://img.shields.io/badge/html%20-%231437.svg?&style=for-the-badge&logo=HTML5&logoColor=red)
+![Express](https://img.shields.io/badge/express%20-%2314354C.svg?&style=for-the-badge&logo=express&logoColor=white) 
+![node.js](https://img.shields.io/badge/node.js%20-%2314.svg?&style=for-the-badge&logo=node.js&logoColor=white)
+
+
 <br><br><hr>
 
 ## Installation
