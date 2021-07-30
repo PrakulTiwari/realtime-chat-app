@@ -5,6 +5,7 @@
 A two-way interactive communication session between the user's browser and a node.js server using sockets and event driven REST APIs. Socket.io is the library used here for broadcasting,emiting and listening of different socket events. MongoDB database connection is given using REST API post request from the api. Frontend is deployed on netlify and backend API on heroku.<br>
 
 ### Project Demo: https://chatting-web-app.netlify.app/
+![chat-app](https://user-images.githubusercontent.com/70375457/127663716-9f753275-d998-4941-9431-932ddabc2c5c.png)
 
 <br><hr><br>
 
@@ -21,6 +22,8 @@ A two-way interactive communication session between the user's browser and a nod
 <br><br><hr>
 
 ## Installation
+![rooms](https://user-images.githubusercontent.com/70375457/127663807-dad8ecc8-a625-4a67-bdaf-4f5ea11e98a5.png)
+
 
 Step 1: Setting up project in your system:<br>
 `git clone https://github.com/PrakulTiwari/realtime-chat-app.git`
