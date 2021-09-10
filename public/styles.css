@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+body{
+    font-family: 'Nunito';
+    background-image: url(https://source.unsplash.com/random);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+h2{
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #575ed8;
+}
+
+#main-chat{
+    max-width: 600px;
+    margin: 30px auto;
+    border: 1px solid;
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.05);
+}
+
+#chat-window{
+    height: 550px;
+    overflow: auto;
+    background: #f9fbfc;
+    position: relative;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    /* scroll-behavior: smooth; */
+}
+
+#output p{
+    padding: 14px 10px;
+    margin: 10px 20px;
+    /* border: 2px solid; */
+    color: white;
+    background-color:#5d7eec;
+    border-radius: 20px 20px 20px 0px;
+    width:17vw;
+    z-index: 2;
+}
+
+#feedback p{
+    color: white;
+    padding: 14px 0px;
+    margin: 0 20px;
+    z-index: 2;
+}
+
+label{
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+}
+
+input{
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #eee;
+    border: 0;
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-family: 'Nunito';
+    font-size: 16px;
+    outline: none;
+}
+
+button{
+    background: #575ed8;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 0 0 2px 2px;
+    margin: 2px;
+    font-family: 'Nunito';
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+}
+.message,.room {
+    display: flex; 
+    background: white;
+}
+i{
+    align-self: center;
+    margin-right: 20px;
+    width: 20px;
+    font-size:20px;
+    color: white;
+    border-radius:50%;
+    border: 1px solid;
+    padding:8px;
+    background-color:#5d7eec;
+}
+
+@media (max-width: 768px) {
+    #output p {
+        width: 60vw;
+    }
+    body {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 768px) {
+    i:hover{
+       background-color: #4866c9; 
+       cursor:pointer;
+    }
+}
